@@ -56,4 +56,7 @@ def callback():
     return "<h2>Vérification réussie ✅</h2><p>Tu peux fermer cette page.</p>"
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+    app.run(host="0.0.0.0", port=10000)if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
